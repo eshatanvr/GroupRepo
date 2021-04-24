@@ -24,18 +24,32 @@ public class Task1 {
                 num++;
             }
         }
+        return num+1;
+    }
+    public static int puncCount(String s)
+    {
+        int num=0;
+         for (int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='!'||s.charAt(i)=='_'||s.charAt(i)==':'||s.charAt(i)==';'||s.charAt(i)=='"'||s.charAt(i)==','||s.charAt(i)=='.'||s.charAt(i)=='?'||s.charAt(i)=='\''||s.charAt(i)=='-')
+            {
+                num++;
+            }
+        }
+       
         return num;
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Enter your line to count number of words:");
+        System.out.println("Enter a phrase:");
         Scanner obj =new Scanner(System.in);
 
         String  line=obj.nextLine();
-        int numberOfWord=wordCounter(line)+1;
+        int numberOfWord=wordCounter(line);
+        int puncCount=puncCount(line);
         
         System.out.println("number of words are: "+numberOfWord);
-        
+        System.out.println("number of punctuations are: "+puncCount);
     }
     
 }
