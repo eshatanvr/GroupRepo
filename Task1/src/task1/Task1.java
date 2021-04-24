@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package task1;
+import java.util.*;
+/**
+ *
+ * @author PCC
+ */
+public class Task1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static int wordCounter(String s)
+    {
+        int num=0;
+        for (int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)==' ')
+            {
+                num++;
+            }
+        }
+        return num;
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("Enter your line to count number of words:");
+        Scanner obj =new Scanner(System.in);
+
+        String  line=obj.nextLine();
+        int numberOfWord=wordCounter(line)+1;
+        
+        System.out.println("number of words are: "+numberOfWord);
+        
+    }
+    
+}
