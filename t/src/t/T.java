@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package t;
+package T3;
 
 import java.util.*;
 /**
  *
  * @author PCC
  */
-public class T {
+public class Task3 {
     /**
      * @param args the command line arguments
      */
