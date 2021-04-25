@@ -14,26 +14,27 @@ public class Task2 {
     /**
      * @param args the command line arguments
      */
-   public static String displayVertical(String s)
+   public static String displayVertical()
    {
-       String ver=" ";
-        for(int i=0;i<s.length();i++)
-        {
-            if(s.charAt(i)!=' ')
-            {
-                
-            
-            System.out.println(s.charAt(i));
-            }
-        }
-       return ver;
-   }
-    public static void main(String[] args) {
-        // TODO code application logic here
         Scanner obj =new Scanner(System.in);
         System.out.println("Enter a phrase:");
         String line=obj.nextLine();
-        displayVertical(line);
+      
+        for(int i=0;i<line.length();i++)
+        {
+            if(line.charAt(i)!=' ')
+            {
+                
+            
+            System.out.println(line.charAt(i));
+            }
+        }
+       return " ";
+   }
+    public static void main(String[] args) {
+        // TODO code application logic here
+       
+        displayVertical();
        
     }
     
