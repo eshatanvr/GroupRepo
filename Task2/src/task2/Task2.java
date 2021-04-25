@@ -24,8 +24,6 @@ public class Task2 {
         {
             if(line.charAt(i)!=' ')
             {
-                
-            
             System.out.println(line.charAt(i));
             }
         }
