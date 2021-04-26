@@ -39,6 +39,27 @@ public class Task1 {
        
         return num;
     }
+     public static boolean isSubsequence (String str1, String str2)
+  {
+    if(str1.length()== 0)
+      return true;
+    int i=0;
+    int j=0;
+    while(i<str1.length()&&j<str2.length()){
+      if(str1.charAt(i)==str2.charAt(j))
+      {
+        i++;
+      }
+      if (str1.length()==i)
+      {
+// Returns true is 1 in SubString
+        return true;
+      }
+      j++;
+    }
+// Returns false is 0 in SubString
+    return false;
+  }
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Enter a phrase:");
@@ -47,9 +68,28 @@ public class Task1 {
         String  line=obj.nextLine();
         int numberOfWord=wordCounter(line);
         int puncCount=puncCount(line);
+        int i;
+        int l=line.length();
+        char ch;
+        int c=0;
+        String s=line.toLowerCase();
+        for(i=0;i<l;i++)
+        {
+          ch=s.charAt(i);
+          if(ch=='a'|| ch=='e' || ch== 'i' || ch== 'o' || ch== 'u')
+          c++;
+        }
         
+        System.out.println("Enter a sub String to find:");
+        String subStr=obj.nextLine();
+         boolean result= isSubsequence(line,subStr);
+         System.out.println(result);
         System.out.println("number of words are: "+numberOfWord);
         System.out.println("number of punctuations are: "+puncCount);
+        System.out.print("total numbers of vowels : " +c);
     }
     
 }
+    
+    
+ 
