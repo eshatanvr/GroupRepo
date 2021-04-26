@@ -52,8 +52,6 @@ public class T {
             // By using this ^ only integers part is separated from string.
             System.out.println("The number part is :" + sInput.replaceAll("[^0-9]", ""));
             System.out.println("The string part is :" + sInput.replaceAll("[0-9]", ""));
-            
-            
     }
     
 }
